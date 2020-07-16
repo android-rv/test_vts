@@ -95,13 +95,13 @@ host_camera_its_copy_pairs :=
 
 endif  # ifneq ($(TARGET_BUILD_PDK),true)
 
-host_systrace_files := \
-  $(filter-out .git/%, \
-    $(call find-files-in-subdirs,external/chromium-trace,"*" -and -type f,.))
-
-host_systrace_copy_pairs := \
-  $(foreach f,$(host_systrace_files),\
-    external/chromium-trace/$(f):$(VTF_TOOLS_OUT)/external/chromium-trace/$(f))
+#host_systrace_files := \
+#  $(filter-out .git/%, \
+#    $(call find-files-in-subdirs,external/chromium-trace,"*" -and -type f,.))
+#
+#host_systrace_copy_pairs := \
+#  $(foreach f,$(host_systrace_files),\
+#    external/chromium-trace/$(f):$(VTF_TOOLS_OUT)/external/chromium-trace/$(f))
 
 target_script_files := \
   $(call find-files-in-subdirs,test/vts/script/target,"*.sh" -and -type f,.)
